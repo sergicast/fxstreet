@@ -1,6 +1,6 @@
 import React from "react";
 import './styles.scss';
-import { Header, SideMenu, RightSection } from '../../Components';
+import { Header, SideMenu, RightSection } from '../../components';
 
 export const Layout = ({children}) => {
     return (
