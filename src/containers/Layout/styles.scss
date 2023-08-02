@@ -1,0 +1,42 @@
+.layout {
+    display: grid;
+    grid-template-columns: 255px 1fr;
+    grid-template-rows: 65px 1fr;
+    grid-template-areas:
+        'sideMenu header header'
+        'sideMenu content rightSection';
+    height: 100vh;
+
+    & header {
+        grid-area: header;
+        background-color: #fff;
+        height: 65px;
+    }
+
+    & nav {
+        grid-area: sideMenu;
+        background-color: #242D38;
+        height: 100%;
+    }
+
+    & main {
+        grid-area: content;
+        background-color: #ECECF1;
+        height: calc(100vh - 65px);
+        overflow-y: auto;
+    }
+
+    & main::-webkit-scrollbar {
+        width: 0.5em;
+    }
+
+    & main::-webkit-scrollbar-thumb {
+        background-color: #ECECF1;
+    }
+
+    .right-section {
+        grid-area: rightSection;
+        background-color: #ECECF1;
+        width: 460px;
+    }
+}
