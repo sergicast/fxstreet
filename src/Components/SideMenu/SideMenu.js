@@ -1,10 +1,12 @@
 import React from "react";
-
 import './SideMenu.scss';
+import fxstreetLogo from '../../assets/img/logo.svg';
+
 
 export const SideMenu = () => {
     return (
-        <nav>
+        <nav className="sidemenu">
+            <img src={fxstreetLogo} alt='between logo' />
             <ul>
                 <li>Option 1</li>
                 <li>Option 2</li>

@@ -1,0 +1,25 @@
+.sidemenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        padding: 0;
+        align-self: flex-start;
+        margin-left: 45px;
+    }
+
+    li {
+        cursor: pointer;
+        list-style: none;
+        color: #fff;
+        margin-bottom: 24px;
+        font-weight: bold;
+    }
+
+    img {
+        width: 164px;
+        margin-top: 48px;
+        margin-bottom: 100px;
+    }
+}
