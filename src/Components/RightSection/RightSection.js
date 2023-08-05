@@ -5,7 +5,8 @@ import './RightSection.scss';
 export const RightSection = () => {
     return (
         <section className="right-section">
-            Right section
+            <div className="right-section__boxone"></div>
+            <div className="right-section__boxtwo"></div>
         </section>
     );
 };

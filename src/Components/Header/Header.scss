@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    &__section_one {
+        width: 100%;
+    }
+    &__section_two {
+        width: 68px;
+        height: 100%;
+        border-left: 1px solid #ECECF1;
+    }
+    &__section_three {
+        width: 68px;
+        height: 100%;
+        border-left: 1px solid #ECECF1;
+    }
+    &__section_four {
+        width: 186px;
+        height: 100%;
+        border-left: 1px solid #ECECF1;
+    }
+}

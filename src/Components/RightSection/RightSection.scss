@@ -1,3 +1,17 @@
 .right-section {
-    border-left: 1px solid black;
+    &__boxone {
+        width: 410px;
+        height: 154px;
+        background-color: #304C70;
+        border-radius: 4px;
+        border: 1px solid #DDDEDF;
+        margin-top: 34px;
+    }
+    &__boxtwo {
+        width: 410px;
+        height: 56px;
+        border-radius: 4px;
+        border: 1px solid #304C70;
+        margin-top: 24px;
+    }
 }
