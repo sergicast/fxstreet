@@ -5,10 +5,10 @@ import './Publication.scss';
 import searchPage from '../../assets/img/search-page.svg';
 import arrowRight from '../../assets/img/arrow-right.svg';
 import clock from '../../assets/img/clock.svg';
-import save from '../../assets/img/save.svg'
-import like from '../../assets/img/like.svg'
-import dots from '../../assets/img/dots.svg'
-import { getFormatDate } from '../../utils'
+import dots from '../../assets/img/dots.svg';
+import { ReactComponent as Save } from '../../assets/img/save.svg';
+import { ReactComponent as Like } from '../../assets/img/like.svg';
+import { getFormatDate } from '../../utils';
 
 export const Publication = ({ publication }) => {
     return (
@@ -30,7 +30,7 @@ export const Publication = ({ publication }) => {
                     <img src={publication.author.imageUrl} alt='arrow' />
                 </div>
                 <div className="publication__author--title">
-                    <p className="publication__author--title--author">FXStreet Team | FXStreet</p>
+                    <p className="publication__author--title--author">{`${publication.feed} | ${publication.subFeed}`}</p>
                     <p className="publication__author--title--text">{publication.title}</p>
                 </div>
             </div>
@@ -40,12 +40,12 @@ export const Publication = ({ publication }) => {
                     <img src={publication.imageUrl} alt='content img' />}
             </div>
             <div className="publication__options">
-                <div className="publication__options--item">
-                    <img src={like} alt='like' />
+                <div className="publication__options--item publication__options--item--like">
+                    <Like />
                     <span>Like</span>
                 </div>
-                <div className="publication__options--item">
-                    <img src={save} alt='save' />
+                <div className="publication__options--item publication__options--item--save">
+                    <Save />
                     <span>Save</span>
                 </div>
                 <div className="publication__options--item">

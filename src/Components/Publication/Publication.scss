@@ -95,12 +95,28 @@
                 user-select: none;
                 margin-right: 46px;
             }
-            & img {
+            & svg {
                 cursor: pointer;
                 user-select: none;
                 margin-right: 5px;
             }
+            img {
+                cursor: pointer;
+            }
         }
-
+        &--item--like:hover span {
+            color: #D25746;
+        }
+        &--item--like:hover svg path {
+            stroke: #D25746;
+            fill: #D25746;
+        }
+        &--item--save:hover span {
+            color: #D25746;
+        }
+        &--item--save:hover svg path {
+            stroke: #D25746;
+            fill: #D25746;
+        }
     }
 }
