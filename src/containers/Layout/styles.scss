@@ -24,10 +24,11 @@
         background-color: #ECECF1;
         height: calc(100vh - 65px);
         overflow-y: auto;
+        padding: 0;
     }
 
     & main::-webkit-scrollbar {
-        width: 0.5em;
+        width: 0em;
     }
 
     & main::-webkit-scrollbar-thumb {

@@ -1,0 +1,106 @@
+.publication {
+    width: 95%;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #DDDEDF;
+    background: #FFF;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(236, 236, 241, 0.5);
+        height: 44px;
+
+        &--topic {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #304C70;
+            margin-left: 29px;
+
+            &--secundary {
+                color: #7598C4;
+            }
+        }
+
+        img {
+            margin: 0 5px;
+        }
+
+        &--time {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #49494F;
+            margin-right: 28px;
+        }
+    }
+
+    &__author {
+        display: flex;
+        margin: 20px 0 10px 30px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ECECF1;
+
+        & img {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            margin-right: 20px;
+        }
+
+        & p {
+            margin: 0;
+        }
+
+        &--title {
+            &--author {
+                font-size: 16px;
+                color: #A3A3A8;
+                font-weight: 700;
+            }
+
+            &--text {
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__content {
+        font-size: 19px;
+        margin: 0 30px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__options {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        color: #49494F;
+        line-height: 17px;
+        margin: 22px 0 22px 30px;
+
+        &--item {
+            display: flex;
+            align-items: center;
+            & span {
+                cursor: pointer;
+                user-select: none;
+                margin-right: 46px;
+            }
+            & img {
+                cursor: pointer;
+                user-select: none;
+                margin-right: 5px;
+            }
+        }
+
+    }
+}

@@ -6,7 +6,7 @@ import fxstreetLogo from '../../assets/img/logo.svg';
 export const SideMenu = () => {
     return (
         <nav className="sidemenu">
-            <img src={fxstreetLogo} alt='between logo' />
+            <img src={fxstreetLogo} alt='fxstreet logo' />
             <ul>
                 <li>Option 1</li>
                 <li>Option 2</li>
