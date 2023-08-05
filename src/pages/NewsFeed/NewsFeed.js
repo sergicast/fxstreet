@@ -1,50 +1,34 @@
-import React, { useEffect } from "react";
-
+import React, { useEffect, useState } from "react";
+import { NewsFeedBar, Publication } from '../../components';
 import './NewsFeed.scss';
 import { getFeeds } from '../../services';
 
 export const NewsFeed = () => {
 
+    const [publications, setPublications] = useState([]);
+    const [isLatest, setIsLatest] = useState(true);
+
     useEffect(() => {
         (async () => {
             const res = await getFeeds();
-            console.log(res);
+            setPublications(res);
         })();
     }, []);
 
 
     return (
         <div className="newsfeed">
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
-            <p>news feed</p>
+            <NewsFeedBar
+                isLatest={isLatest}
+                setIsLatest={setIsLatest}
+            />
+            {
+                publications &&
+                publications.map(publi => (!isLatest && publi.isPopular) || (isLatest) ?
+                    <Publication publication={publi} /> :
+                    <> </>
+                )
+            }
         </div>
     );
 };

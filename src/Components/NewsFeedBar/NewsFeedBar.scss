@@ -1,0 +1,49 @@
+.newsfeedbar_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin-top: 34px;
+    margin-bottom: 17px;
+
+    &--left {
+        .list {
+            padding: 0;
+            margin: 0 0 0 4px;
+            list-style: none;
+            display: flex;
+            font-size: 18px;
+            font-weight: 800;
+            color: #8C8D91;
+
+            &__item {
+                cursor: pointer;
+                
+                &--popular {
+                    margin-left: 19px;
+                }
+                
+                &--latest {
+                    width: 76px;
+                }
+                &--selected {
+                    user-select: none;
+                    color: #E4871B;
+                }
+            }
+        }
+    }
+
+    &--right {
+        font-size: 15px;
+        color: #49494F;
+        font-weight: 400;
+        .select {
+            margin-left: 11px;
+            font-weight: 700;
+            border: 0;
+            background-color: #ECECF1;
+            outline: none;
+        }
+    }
+}
