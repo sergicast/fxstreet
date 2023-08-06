@@ -36,7 +36,7 @@ export const NewsFeedBar = ({ isLatest, setIsLatest }) => {
             </div>
             <div className="newsfeedbar_menu--right">
                 Show:
-                <select className="select">
+                <select data-testid="select" className="select">
                     <option value="hide">All</option>
                     <option value="2">One</option>
                     <option value="3">Two</option>

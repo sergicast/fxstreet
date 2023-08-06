@@ -11,10 +11,10 @@ export const HeaderMenu = () => {
     return (
         <header className="header">
             <LogoMobile />
-            <div className="header__section_one"></div>
-            <div className="header__section_two"></div>
-            <div className="header__section_three"></div>
-            <div className="header__section_four"></div>
+            <div data-testid="div" className="header__section_one"></div>
+            <div data-testid="div" className="header__section_two"></div>
+            <div data-testid="div" className="header__section_three"></div>
+            <div data-testid="div" className="header__section_four"></div>
         </header>
     );
 };

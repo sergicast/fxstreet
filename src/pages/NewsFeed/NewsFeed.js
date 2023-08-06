@@ -29,7 +29,7 @@ export const NewsFeed = () => {
             {
                 publications &&
                 publications.map(publi => (!isLatest && publi.isPopular) || (isLatest) ?
-                    <Publication publication={publi} /> :
+                    <Publication key={publi.id} publication={publi} /> :
                     <> </>
                 )
             }

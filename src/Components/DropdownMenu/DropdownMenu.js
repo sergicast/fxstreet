@@ -15,9 +15,11 @@ export const DropdownMenu = ({ handleOnClickSubMenu }) => {
         <div className="dropdown">
             {
                 dropdownConfig.map(({ Icon, label, hasSubMenu, key }) =>
-                    <div 
-                    className="dropdown__item"
-                    onClick={() => handleOnClickSubMenu(hasSubMenu, key)}
+                    <div
+                        data-testid="dropdown-item"
+                        key={key}
+                        className="dropdown__item"
+                        onClick={() => handleOnClickSubMenu(hasSubMenu, key)}
                     >
                         <Icon />
                         <span>{label}</span>
