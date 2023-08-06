@@ -11,10 +11,18 @@ export const NewsFeedBar = ({ isLatest, setIsLatest }) => {
                 <ul className="list">
                     <li
                         className={`list__item${isLatest ? '--selected' : ''} list__item--latest`}
+                        style={{
+                            color: isLatest ? '#E4871B' : '',
+                            userSelect: "none"
+                        }}
                         onClick={() => setIsLatest(true)}
-                    >Latest</li>
+                        >Latest</li>
                     <li
                         className={`list__item${!isLatest ? '--selected' : ''} list__item--popular`}
+                        style={{
+                            color: !isLatest ? '#E4871B' : '',
+                            userSelect: "none"
+                        }}
                         onClick={() => setIsLatest(false)}
                     >Popular</li>
                 </ul>

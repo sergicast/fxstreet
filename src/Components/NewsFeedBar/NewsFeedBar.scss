@@ -30,6 +30,13 @@
                     user-select: none;
                     color: #E4871B;
                 }
+                &--popular:hover {
+                   color: #49494F;
+                }
+                
+                &--latest:hover {
+                    color: #49494F;
+                }
             }
         }
     }

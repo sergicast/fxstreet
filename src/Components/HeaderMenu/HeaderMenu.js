@@ -1,7 +1,7 @@
 import React from "react";
-import './Header.scss';
+import './HeaderMenu.scss';
 
-export const Header = () => {
+export const HeaderMenu = () => {
     return (
         <header className="header">
             <div className="header__section_one"></div>

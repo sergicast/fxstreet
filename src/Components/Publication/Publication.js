@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactHtmlParser from 'html-react-parser';
 import './Publication.scss';
+import { DropdownMenu, TellUsWhy } from "../../components";
 
 import searchPage from '../../assets/img/search-page.svg';
 import arrowRight from '../../assets/img/arrow-right.svg';
@@ -11,8 +12,26 @@ import { ReactComponent as Like } from '../../assets/img/like.svg';
 import { getFormatDate } from '../../utils';
 
 export const Publication = ({ publication }) => {
+
+    const [isDropdown, setIsDropdown] = useState(false);
+    const [isSubMenu, setIsSubMenu] = useState(false);
+
+
+    const handleOnClickSubMenu = (hasSubMenu, key) => {
+        if (hasSubMenu && key === 'improve') {
+            setIsSubMenu(true);
+            setIsDropdown(false);
+        }
+    };
+
+    const handleOnBack = () => {
+        setIsDropdown(true);
+        setIsSubMenu(false);
+    };
+
     return (
         <div className="publication">
+
             <div className="publication__header">
                 <div className="publication__header--topic">
                     <img src={searchPage} alt='search' />
@@ -25,6 +44,7 @@ export const Publication = ({ publication }) => {
                     <span>{getFormatDate(publication.publicationTime)}</span>
                 </div>
             </div>
+
             <div className="publication__author">
                 <div className="publication__author--logo">
                     <img src={publication.author.imageUrl} alt='arrow' />
@@ -34,11 +54,13 @@ export const Publication = ({ publication }) => {
                     <p className="publication__author--title--text">{publication.title}</p>
                 </div>
             </div>
+
             <div className="publication__content">
                 {ReactHtmlParser(publication.content)}
                 {publication?.imageUrl &&
                     <img src={publication.imageUrl} alt='content img' />}
             </div>
+
             <div className="publication__options">
                 <div className="publication__options--item publication__options--item--like">
                     <Like />
@@ -49,7 +71,15 @@ export const Publication = ({ publication }) => {
                     <span>Save</span>
                 </div>
                 <div className="publication__options--item">
-                    <img src={dots} alt='dots' />
+                    <img src={dots} alt='dots' onClick={() => {
+                        if (!isSubMenu) {
+                            setIsDropdown(!isDropdown);
+                        } else {
+                            setIsSubMenu(!isSubMenu);
+                        }
+                    }} />
+                    {isDropdown && <DropdownMenu handleOnClickSubMenu={handleOnClickSubMenu} />}
+                    {isSubMenu && <TellUsWhy handleOnBack={handleOnBack} />}
                 </div>
             </div>
         </div>
