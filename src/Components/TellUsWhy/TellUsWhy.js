@@ -3,6 +3,12 @@ import './TellUsWhy.scss';
 
 import { ReactComponent as ArrowLeft } from '../../assets/img/arrow-left.svg';
 
+/**
+ * Component about submenu of Dropdown menu.
+ * @param {Object} props - The component props.
+ * @param {Function} props.handleOnBack - Function for return to principal menu.
+ * @returns {React.ReactElement}
+ */
 export const TellUsWhy = ({ handleOnBack }) => {
 
     const [selectedOption, setSelectedOption] = useState('');

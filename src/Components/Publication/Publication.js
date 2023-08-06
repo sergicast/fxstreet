@@ -11,6 +11,35 @@ import { ReactComponent as Save } from '../../assets/img/save.svg';
 import { ReactComponent as Like } from '../../assets/img/like.svg';
 import { getFormatDate } from '../../utils';
 
+/**
+ * Author data.
+ * @typedef AuthorType
+ * @property {String} id Id about author.
+ * @property {String} name Name of author.
+ * @property {String} companyName Company name.
+ * @property {String} imageUrl URL image.
+ */
+
+/**
+ * Publication data.
+ * @typedef PublicationType
+ * @property {String} id Id about the publication.
+ * @property {String} title Title about the publication.
+ * @property {String} content Content with string HTML.
+ * @property {String} imageUrl URL image.
+ * @property {String} publicationTime String date.
+ * @property {Boolean} isPopular Data that tells us if it is popular or not.
+ * @property {String} feed Feed.
+ * @property {String} subFeed Subfeed.
+ * @property {AuthorType} author Max value of the Range.
+ */
+
+/**
+ * Component single publication in news feed.
+ * @param {Object} props - The component props.
+ * @param {PublicationType} props.publication - Publication info.
+ * @returns {React.ReactElement}
+ */
 export const Publication = ({ publication }) => {
 
     const [isDropdown, setIsDropdown] = useState(false);

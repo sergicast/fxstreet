@@ -3,6 +3,12 @@ import './DropdownMenu.scss';
 
 import { dropdownConfig } from "./dropdownConfig";
 
+/**
+ * Dropdown menu component.
+ * @param {Object} props - The component props.
+ * @param {function} props.handleOnClickSubMenu - Function called when a submenu item is clicked.
+ * @returns {React.ReactElement}
+ */
 export const DropdownMenu = ({ handleOnClickSubMenu }) => {
 
     return (

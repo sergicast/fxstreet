@@ -3,6 +3,10 @@ import { NewsFeedBar, Publication } from '../../components';
 import './NewsFeed.scss';
 import { getFeeds } from '../../services';
 
+/**
+ * News feed component.
+ * @returns {React.ReactElement}
+ */
 export const NewsFeed = () => {
 
     const [publications, setPublications] = useState([]);

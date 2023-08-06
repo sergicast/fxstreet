@@ -3,7 +3,10 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { NewsFeed } from '../pages';
 
-
+/**
+ * Routes component.
+ * @returns {React.ReactElement}
+ */
 export const MainRoutes = function () {
 
     return (

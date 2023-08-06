@@ -3,7 +3,13 @@ import './NewsFeedBar.scss';
 
 import { ReactComponent as Filter } from '../../assets/img/filter.svg';
 
-
+/**
+ * Component about the news feed bar for control all the news feed.
+ * @param {Object} props - The component props.
+ * @param {boolean} props.isLatest - Inform if the latest or popular option is selected.
+ * @param {function} props.setIsLatest - Function to set lastest or popular news feed.
+ * @returns {React.ReactElement}
+ */
 export const NewsFeedBar = ({ isLatest, setIsLatest }) => {
 
     return (

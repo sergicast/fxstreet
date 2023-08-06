@@ -3,6 +3,10 @@ import './SideMenu.scss';
 import fxstreetLogo from '../../assets/img/logo.svg';
 import { Link } from "react-router-dom";
 
+/**
+ * Left menu component.
+ * @returns {React.ReactElement}
+ */
 export const SideMenu = () => {
     return (
         <nav className="sidemenu">
