@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactHtmlParser from 'html-react-parser';
 import './Publication.scss';
 import { DropdownMenu, TellUsWhy } from "../../components";
@@ -45,6 +45,20 @@ export const Publication = ({ publication }) => {
     const [isDropdown, setIsDropdown] = useState(false);
     const [isSubMenu, setIsSubMenu] = useState(false);
 
+    function useOutsideDropdown(ref) {
+        useEffect(() => {
+            function clickOutsideDropdown(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    setIsSubMenu(false);
+                    setIsDropdown(false);
+                }
+            }
+            document.addEventListener("mousedown", clickOutsideDropdown);
+            return () => {
+                document.removeEventListener("mousedown", clickOutsideDropdown);
+            };
+        }, [ref]);
+    }
 
     const handleOnClickSubMenu = (hasSubMenu, key) => {
         if (hasSubMenu && key === 'improve') {
@@ -124,8 +138,8 @@ export const Publication = ({ publication }) => {
                             setIsSubMenu(!isSubMenu);
                         }
                     }} />
-                    {isDropdown && <DropdownMenu handleOnClickSubMenu={handleOnClickSubMenu} />}
-                    {isSubMenu && <TellUsWhy handleOnBack={handleOnBack} />}
+                    {isDropdown && <DropdownMenu useOutsideDropdown={useOutsideDropdown} handleOnClickSubMenu={handleOnClickSubMenu} />}
+                    {isSubMenu && <TellUsWhy useOutsideDropdown={useOutsideDropdown} handleOnBack={handleOnBack} />}
                 </div>
             </div>
         </div>

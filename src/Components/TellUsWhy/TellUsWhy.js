@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import './TellUsWhy.scss';
 
 import { ReactComponent as ArrowLeft } from '../../assets/img/arrow-left.svg';
@@ -7,18 +7,22 @@ import { ReactComponent as ArrowLeft } from '../../assets/img/arrow-left.svg';
  * Component about submenu of Dropdown menu.
  * @param {Object} props - The component props.
  * @param {Function} props.handleOnBack - Function for return to principal menu.
+ * @param {function} props.useOutsideDropdown - Hook for capturing click outside that component.
  * @returns {React.ReactElement}
  */
-export const TellUsWhy = ({ handleOnBack }) => {
+export const TellUsWhy = ({ handleOnBack, useOutsideDropdown }) => {
 
     const [selectedOption, setSelectedOption] = useState('');
+
+    const tellUsWhyRef = useRef(null);
+    useOutsideDropdown(tellUsWhyRef);
 
     const handleOnSelect = ({ target: { value } }) => {
         setSelectedOption(value);
     };
 
     return (
-        <div className="tellus">
+        <div ref={tellUsWhyRef} className="tellus">
             <div
                 className="tellus__item tellus__item--title"
                 onClick={() => handleOnBack()}
