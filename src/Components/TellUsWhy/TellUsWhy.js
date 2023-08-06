@@ -83,7 +83,10 @@ export const TellUsWhy = ({ handleOnBack }) => {
                 </label>
             </div>
             <div className="tellus__item--button">
-                <button>Hide content</button>
+                <button style={{
+                    opacity: selectedOption ? 1 : 0.3,
+                    cursor: selectedOption ? 'pointer' : 'auto',
+                }}>Hide content</button>
             </div>
         </div>
     );

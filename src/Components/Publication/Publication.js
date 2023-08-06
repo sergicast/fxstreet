@@ -39,6 +39,13 @@ export const Publication = ({ publication }) => {
                     <img src={arrowRight} alt='arrow' />
                     <span className="publication__header--topic--secundary">{publication.subFeed}</span>
                 </div>
+                <div className="publication__header--topic--mobile">
+                    <div>
+                        <img src={searchPage} alt='search' />
+                        <span>{publication.feed}</span>
+                    </div>
+                    <span className=" publication__header--topic--mobile--secundary">{publication.subFeed}</span>
+                </div>
                 <div className="publication__header--time">
                     <img src={clock} alt='clock' />
                     <span>{getFormatDate(publication.publicationTime)}</span>
@@ -52,6 +59,16 @@ export const Publication = ({ publication }) => {
                 <div className="publication__author--title">
                     <p className="publication__author--title--author">{`${publication.feed} | ${publication.subFeed}`}</p>
                     <p className="publication__author--title--text">{publication.title}</p>
+                </div>
+            </div>
+
+            <div className="publication__author--mobile">
+                <div className="publication__author--mobile--feed">
+                    <p className="publication__author--mobile--feed--author">{`${publication.feed} | ${publication.subFeed}`}</p>
+                </div>
+                <div className="publication__author--mobile--title">
+                    <img src={publication.author.imageUrl} alt='arrow' />
+                    <p className="publication__author--mobile--title--text">{publication.title}</p>
                 </div>
             </div>
 

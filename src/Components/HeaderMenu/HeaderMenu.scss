@@ -1,21 +1,56 @@
 .header {
     display: flex;
+
     &__section_one {
         width: 100%;
     }
+
     &__section_two {
         width: 68px;
         height: 100%;
         border-left: 1px solid #ECECF1;
     }
+
     &__section_three {
         width: 68px;
         height: 100%;
         border-left: 1px solid #ECECF1;
     }
+
     &__section_four {
         width: 186px;
         height: 100%;
         border-left: 1px solid #ECECF1;
+    }
+    svg {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 140px;
+            height: 27px;
+            display: inline;
+            margin-left: 18px;
+        }
+        &__section_one {
+            display: none;
+        }
+
+        &__section_two {
+            display: none;
+        }
+
+        &__section_three {
+            display: none;
+        }
+
+        &__section_four {
+            display: none;
+        }
     }
 }

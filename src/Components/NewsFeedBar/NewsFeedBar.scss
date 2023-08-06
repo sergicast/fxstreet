@@ -18,22 +18,24 @@
 
             &__item {
                 cursor: pointer;
-                
+
                 &--popular {
                     margin-left: 19px;
                 }
-                
+
                 &--latest {
                     width: 76px;
                 }
+
                 &--selected {
                     user-select: none;
                     color: #E4871B;
                 }
+
                 &--popular:hover {
-                   color: #49494F;
+                    color: #49494F;
                 }
-                
+
                 &--latest:hover {
                     color: #49494F;
                 }
@@ -45,12 +47,28 @@
         font-size: 15px;
         color: #49494F;
         font-weight: 400;
+
         .select {
             margin-left: 11px;
             font-weight: 700;
             border: 0;
             background-color: #ECECF1;
             outline: none;
+        }
+    }
+
+    &--right--mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .newsfeedbar_menu {
+        &--right {
+            display: none;
+        }
+        &--right--mobile {
+            display: flex;
         }
     }
 }

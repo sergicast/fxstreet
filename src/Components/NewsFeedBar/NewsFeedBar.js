@@ -1,6 +1,8 @@
 import React from "react";
 import './NewsFeedBar.scss';
 
+import { ReactComponent as Filter } from '../../assets/img/filter.svg';
+
 
 export const NewsFeedBar = ({ isLatest, setIsLatest }) => {
 
@@ -34,6 +36,9 @@ export const NewsFeedBar = ({ isLatest, setIsLatest }) => {
                     <option value="2">One</option>
                     <option value="3">Two</option>
                 </select>
+            </div>
+            <div className="newsfeedbar_menu--right--mobile">
+                <Filter />
             </div>
         </div>
     );
