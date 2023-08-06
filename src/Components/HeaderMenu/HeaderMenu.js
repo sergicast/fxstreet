@@ -3,7 +3,6 @@ import './HeaderMenu.scss';
 
 import { ReactComponent as LogoMobile } from '../../assets/img/logo-mobile.svg';
 
-
 export const HeaderMenu = () => {
     return (
         <header className="header">

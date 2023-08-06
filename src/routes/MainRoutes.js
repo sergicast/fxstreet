@@ -10,7 +10,7 @@ export const MainRoutes = function () {
         <Routes>
             <Route path="/" element={<Navigate to='/main' />} />
             <Route path="/main" element={<NewsFeed />} />
-            <Route path="*" element={<h1>No existe esta ruta</h1>} />
+            <Route path="*" element={<h1>This route does not exist</h1>} />
         </Routes>
     );
 };

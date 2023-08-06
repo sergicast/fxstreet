@@ -7,6 +7,7 @@
         border: 1px solid #DDDEDF;
         margin-top: 34px;
     }
+
     &__boxtwo {
         width: 410px;
         height: 56px;
@@ -23,6 +24,7 @@
         align-items: center;
         width: 95%;
         padding-bottom: 15px;
+
         &__boxone {
             width: 95%;
             height: 154px;
@@ -31,6 +33,7 @@
             border: 1px solid #DDDEDF;
             margin-top: 0px;
         }
+
         &__boxtwo {
             width: 95%;
             height: 56px;
@@ -39,4 +42,4 @@
             margin-top: 15px;
         }
     }
-  }
+}

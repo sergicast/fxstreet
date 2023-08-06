@@ -1,6 +1,5 @@
 import { ReactComponent as Hide } from '../../assets/img/hide.svg';
 import { ReactComponent as Improve } from '../../assets/img/improve.svg';
-import { ReactComponent as ArrowLeft } from '../../assets/img/arrow-left.svg';
 
 export const dropdownConfig = [
     {

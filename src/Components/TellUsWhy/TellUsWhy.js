@@ -3,7 +3,6 @@ import './TellUsWhy.scss';
 
 import { ReactComponent as ArrowLeft } from '../../assets/img/arrow-left.svg';
 
-
 export const TellUsWhy = ({ handleOnBack }) => {
 
     const [selectedOption, setSelectedOption] = useState('');
@@ -21,6 +20,7 @@ export const TellUsWhy = ({ handleOnBack }) => {
                 <ArrowLeft />
                 <span>Tell us why:</span>
             </div>
+
             <div className="tellus__item--radiogroup">
                 <label>
                     <input
@@ -82,6 +82,7 @@ export const TellUsWhy = ({ handleOnBack }) => {
                     Other reasons
                 </label>
             </div>
+            
             <div className="tellus__item--button">
                 <button style={{
                     opacity: selectedOption ? 1 : 0.3,

@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { es } from 'date-fns/locale'
+import { es } from 'date-fns/locale';
 
 export const getFormatDate = (date) => {
     const fechaObj = new Date(date);

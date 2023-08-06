@@ -224,15 +224,17 @@
                 }
             }
         }
+
         &__content {
             font-size: 15px;
             margin: 0 30px;
             line-height: 20px;
-    
+
             & img {
                 width: 100%;
             }
         }
+
         &__options {
             display: flex;
             align-items: center;
@@ -241,24 +243,24 @@
             color: #49494F;
             line-height: 17px;
             margin: 22px 0 22px 30px;
-    
+
             &--item {
                 display: flex;
                 align-items: center;
                 position: relative;
-    
+
                 & span {
                     cursor: pointer;
                     user-select: none;
                     margin-right: 46px;
                 }
-    
+
                 & svg {
                     cursor: pointer;
                     user-select: none;
                     margin-right: 5px;
                 }
-    
+
                 img {
                     cursor: pointer;
                 }

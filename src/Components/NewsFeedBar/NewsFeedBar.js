@@ -6,7 +6,6 @@ import { ReactComponent as Filter } from '../../assets/img/filter.svg';
 
 export const NewsFeedBar = ({ isLatest, setIsLatest }) => {
 
-
     return (
         <div className="newsfeedbar_menu">
             <div className="newsfeedbar_menu--left">

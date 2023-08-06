@@ -22,6 +22,7 @@
         height: 100%;
         border-left: 1px solid #ECECF1;
     }
+
     svg {
         display: none;
     }
@@ -31,12 +32,14 @@
     .header {
         display: flex;
         align-items: center;
+
         svg {
             width: 140px;
             height: 27px;
             display: inline;
             margin-left: 18px;
         }
+
         &__section_one {
             display: none;
         }
